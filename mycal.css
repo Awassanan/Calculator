@@ -1,0 +1,40 @@
+.mycal {
+    background-color: palevioletred;
+    width: 300px;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow:10px 10px 5px lightgray;
+}
+
+input {
+    width: 100%;
+    height: 60px;
+    text-align: end;
+    font-size: larger;
+}
+
+.circle-button {
+    border-radius: 50%;
+    font-size: larger;
+    height: 48px;
+    width: 48px;
+}
+
+.long-button {
+    border-radius: 50%;
+    font-size: larger;
+    height: 48px;
+    width: 96px;
+}
+
+.calculator-wrapper {
+    margin: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-heading {
+    color: rgb(219, 0, 109);
+    padding-bottom: 1rem;
+}
