@@ -40,7 +40,6 @@ function calculate() {
 
 function allClear() {
     equation = ""
-    historyList = ""
     document.getElementById("equation").value = ""
     document.getElementById("history-list").innerHTML = ""
     id = 0
@@ -57,11 +56,13 @@ function setBGcolor(color) {
 
 function showHistory(result) {
     id++
+    
     let history = {
         RowId: id,
         Equation: equation,
         Result: result
     }
+
     let historyDiv = document.getElementById("history-list")
     row = document.createElement("div")
     row.setAttribute("class", "history-row")
