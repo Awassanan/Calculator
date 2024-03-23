@@ -56,17 +56,11 @@ function setBGcolor(color) {
 
 function showHistory(result) {
     id++
-    
-    let history = {
-        RowId: id,
-        Equation: equation,
-        Result: result
-    }
 
     let historyDiv = document.getElementById("history-list")
     row = document.createElement("div")
     row.setAttribute("class", "history-row")
-    row.innerHTML = 'ครั้งที่ : ' + history.RowId + '<br>' + "equation : " + history.Equation + "<br>" + "result : " + history.Result
+    row.innerHTML = 'ครั้งที่ : ' + id + '<br>' + "equation : " + equation + "<br>" + "result : " + result
     historyDiv.appendChild(row)
 }
 
