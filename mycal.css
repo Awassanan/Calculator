@@ -45,8 +45,15 @@ input {
     align-items: center;
 }
 
-/* Custom CSS to override Bootstrap's .row class */
 .row {
-    margin-right: 0; /* Remove right margin */
-    margin-left: 0; /* Remove left margin */
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.color-palette {
+    margin-bottom: 1rem;
+}
+
+.history {
+    margin-top: 1rem;
 }
