@@ -16,46 +16,101 @@
 </head>
 
 <body>
-    <div class="calculator-wrapper">
-        <h2 class="calculator-heading">
-            My simple calculator
-            <i class="bi bi-calculator"></i>
-        </h2>
-        <div class="container mycal">
-            <input type="text" id="equation">
-            <div class="d-flex justify-content-between" style="padding: 0.5rem;">
-                <button type="button" onclick="allClear()" class="btn btn-secondary circle-button">AC</button>
-                <button type="button" onclick="appendToEquation('(')" class="btn btn-secondary circle-button">(</button>
-                <button type="button" onclick="appendToEquation(')')" class="btn btn-secondary circle-button">)</button>
-                <button type="button" onclick="appendToEquation('/')" class="btn btn-secondary circle-button">÷</button>
+    <div class="row d-flex justify-content-between align-items-center text-center">
+        <div class="calculator-wrapper col-lg-4 col-md-4 col-sm-12">
+            <h2 class="calculator-heading">
+                <span id="calname"></span>calculator
+                <i class="bi bi-calculator"></i>
+            </h2>
+            <div class="container" id="mycal">
+                <input type="text" id="equation" readonly>
+                <div class="d-flex justify-content-between align-items-center" style="padding:1rem 0.5rem 0.5rem 0.5rem;">
+                    <button type="button" onclick="allClear()" class="btn btn-secondary circle-button">AC</button>
+                    <button type="button" onclick="appendToEquation('(')" class="btn btn-secondary circle-button">(</button>
+                    <button type="button" onclick="appendToEquation(')')" class="btn btn-secondary circle-button">)</button>
+                    <button type="button" onclick="appendToEquation('/')" class="btn btn-secondary circle-button">÷</button>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center" style="padding: 0.5rem;">
+                    <button type="button" onclick="appendToEquation('7')" class="btn btn-primary circle-button">7</button>
+                    <button type="button" onclick="appendToEquation('8')" class="btn btn-primary circle-button">8</button>
+                    <button type="button" onclick="appendToEquation('9')" class="btn btn-primary circle-button">9</button>
+                    <button type="button" onclick="appendToEquation('*')" class="btn btn-secondary circle-button">x</button>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center" style="padding: 0.5rem;">
+                    <button type="button" onclick="appendToEquation('4')" class="btn btn-primary circle-button">4</button>
+                    <button type="button" onclick="appendToEquation('5')" class="btn btn-primary circle-button">5</button>
+                    <button type="button" onclick="appendToEquation('6')" class="btn btn-primary circle-button">6</button>
+                    <button type="button" onclick="appendToEquation('-')" class="btn btn-secondary circle-button">-</button>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center" style="padding: 0.5rem;">
+                    <button type="button" onclick="appendToEquation('1')" class="btn btn-primary circle-button">1</button>
+                    <button type="button" onclick="appendToEquation('2')" class="btn btn-primary circle-button">2</button>
+                    <button type="button" onclick="appendToEquation('3')" class="btn btn-primary circle-button">3</button>
+                    <button type="button" onclick="appendToEquation('+')" class="btn btn-secondary circle-button">+</button>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center" style="padding: 0.5rem;">
+                    <button type="button" onclick="appendToEquation('0')" class="btn btn-primary circle-button">0</button>
+                    <button type="button" onclick="appendToEquation('.')" class="btn btn-primary circle-button">.</button>
+                    <button type="button" onclick="backspace()" class="btn btn-primary circle-button">
+                        <i class="bi bi-backspace"></i>
+                    </button>
+                    <button type="button" onclick="calculate()" class="btn btn-primary circle-button">=</button>
+                </div>
+            </div>
+        </div>
+        <div class="container col-lg-4 col-md-4 col-sm-12" style="margin-bottom: 1rem; margin-top: 1rem;">
+            <h2>Custom Your Calculator<br>Background Color
+                <i class="bi bi-palette-fill"></i>
+            </h2>
+            <div>
+                <button type="button" onclick="setBGcolor('black')" class="circle-button"
+                    style="background-color: black;"></button>
+                <button type="button" onclick="setBGcolor('lightgrey')" class="circle-button"
+                    style="background-color: lightgrey;"></button>
+                <button type="button" onclick="setBGcolor('chocolate')" class="circle-button"
+                    style="background-color:chocolate;"></button>
             </div>
 
-            <div class="d-flex justify-content-between align-items-center" style="padding: 0.5rem;">
-                <button type="button" onclick="appendToEquation('7')" class="btn btn-primary circle-button">7</button>
-                <button type="button" onclick="appendToEquation('8')" class="btn btn-primary circle-button">8</button>
-                <button type="button" onclick="appendToEquation('9')" class="btn btn-primary circle-button">9</button>
-                <button type="button" onclick="appendToEquation('*')" class="btn btn-secondary circle-button">x</button>
+            <div>
+                <button type="button" onclick="setBGcolor('purple')" class="circle-button"
+                    style="background-color: purple;"></button>
+                <button type="button" onclick="setBGcolor('violet')" class="circle-button"
+                    style="background-color: violet;"></button>
+                <button type="button" onclick="setBGcolor('fuchsia')" class="circle-button"
+                    style="background-color: fuchsia;"></button>
             </div>
-
-            <div class="d-flex justify-content-between" style="padding: 0.5rem;">
-                <button type="button" onclick="appendToEquation('4')" class="btn btn-primary circle-button">4</button>
-                <button type="button" onclick="appendToEquation('5')" class="btn btn-primary circle-button">5</button>
-                <button type="button" onclick="appendToEquation('6')" class="btn btn-primary circle-button">6</button>
-                <button type="button" onclick="appendToEquation('-')" class="btn btn-secondary circle-button">-</button>
+            <div>
+                <button type="button" onclick="setBGcolor('cornflowerblue')" class="circle-button"
+                    style="background-color: cornflowerblue;"></button>
+                <button type="button" onclick="setBGcolor('turquoise')" class="circle-button"
+                    style="background-color: turquoise;"></button>
+                <button type="button" onclick="setBGcolor('palegreen')" class="circle-button"
+                    style="background-color: palegreen;"></button>
             </div>
-
-            <div class="d-flex justify-content-between" style="padding: 0.5rem;">
-                <button type="button" onclick="appendToEquation('1')" class="btn btn-primary circle-button">1</button>
-                <button type="button" onclick="appendToEquation('2')" class="btn btn-primary circle-button">2</button>
-                <button type="button" onclick="appendToEquation('3')" class="btn btn-primary circle-button">3</button>
-                <button type="button" onclick="appendToEquation('+')" class="btn btn-secondary circle-button">+</button>
+            <div>
+                <button type="button" onclick="setBGcolor('yellow')" class="circle-button"
+                    style="background-color: yellow;"></button>
+                <button type="button" onclick="setBGcolor('lightsalmon')" class="circle-button"
+                    style="background-color: lightsalmon;"></button>
+                <button type="button" onclick="setBGcolor('lightcoral')" class="circle-button"
+                    style="background-color: lightcoral;"></button>
             </div>
-
-            <div class="d-flex justify-content-between" style="padding: 0.5rem;">
-                <button type="button" onclick="appendToEquation('0')" class="btn btn-primary circle-button">0</button>
-                <button type="button" onclick="appendToEquation('.')" class="btn btn-primary circle-button">.</button>
-                <button type="button" onclick="calculate()" class="btn btn-primary long-button">=</button>
+            <div>
+                <button type="button" onclick="setBGcolor('palevioletred')" class="circle-button"
+                    style="background-color: palevioletred;"></button>
+                <button type="button" onclick="setBGcolor('pink')" class="circle-button"
+                    style="background-color: pink;"></button>
+                <button type="button" onclick="setBGcolor('crimson')" class="circle-button"
+                    style="background-color:crimson;"></button>
             </div>
+        </div>
+        <div class="container col-lg-4 col-md-4 col-sm-12" style="margin-top: 1rem;">
+            <h2>History</h2>
+            <div id="history-list" class="justify-content-between align-items-center text-center"></div>
         </div>
     </div>
 
