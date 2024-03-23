@@ -1,6 +1,6 @@
 #mycal {
     background-color: palevioletred;
-    width: 300px; /* Set a percentage-based width */
+    width: 300px;
     padding: 20px;
     border-radius: 16px;
     box-shadow: 10px 10px 5px lightgray;
@@ -34,17 +34,6 @@ input {
     padding-bottom: 0.5rem;
 }
 
-.history-row {
-    border-radius: 15px;
-    border: solid lightgrey 1px;
-    margin: 8px;
-    width: 100%;
-    padding: 4px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
-
 .row {
     margin-right: 0;
     margin-left: 0;
@@ -52,8 +41,48 @@ input {
 
 .color-palette {
     margin-bottom: 1rem;
+    border: solid lightgrey 1px;
+    border-radius: 16px;
+    padding: 10px;
+    box-shadow: 10px 10px 5px lightgray;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    background-color: rgb(255, 214, 221);
+}
+
+.history-row {
+    border-radius: 15px;
+    border: solid lightgrey 1px;
+    margin: 8px;
+    padding: 4px;
+    text-align: center;
+    background-color: rgb(245, 239, 239);
 }
 
 .history {
-    margin-top: 1rem;
+    border: solid lightgrey 1px;
+    border-radius: 16px;
+    box-shadow: 10px 10px 5px lightgray;
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 350px; 
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 214, 221);
+}
+
+.history::-webkit-scrollbar {
+    width: 8px;
+}
+
+.history::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 4px;
 }
