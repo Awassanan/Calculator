@@ -19,7 +19,14 @@ function appendToEquation(value) {
 
 function calculate() {
     try {
-        let result = eval(equation)
+        let result = 0
+        if (equation.length > 0) {
+            result = eval(equation)
+        } else {
+            equation = "0"
+            result = 0
+        }
+
         showHistory(result)
 
         document.getElementById("equation").value = result
