@@ -19,8 +19,3 @@ This is a simple calculator web application created using HTML5, CSS3, JavaScrip
 
 4. <span style="font-size:larger;"><b>Viewing History:</b></span>
 - The application keeps a record of previous calculations for reference.
-
-<hr>
-
-## <span style="font-size:larger;">Visit the Web Application</span>
-You can try the calculator web application here: <span style="font-size:larger;">[my GitHub Pages](https://awassanan.github.io/Calculator/)</span>.
